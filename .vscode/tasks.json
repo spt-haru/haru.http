@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        // install packages
+        {
+            "label": "nuget: restore",
+            "type": "shell",
+            "command": "dotnet restore --nologo --configfile Nuget.config",
+            "problemMatcher": "$msCompile"
+        },
+        // build solution
+        {
+            "label": "dotnet: build (debug)",
+            "type": "shell",
+            "command": "dotnet build --nologo --no-restore --configuration Debug",
+            "problemMatcher": "$msCompile",
+            "dependsOn": [ "dotnet: tool restore", "nuget: restore" ],
+            "group": "build"
+        },
+        {
+            "label": "dotnet: build (release)",
+            "type": "shell",
+            "command": "dotnet build --nologo --no-restore --configuration Release",
+            "problemMatcher": "$msCompile",
+            "dependsOn": [ "dotnet: tool restore", "nuget: restore" ],
+            "group": "build"
+        }
+    ]
+}

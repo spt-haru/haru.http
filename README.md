@@ -1,1 +1,3 @@
-# haru.http
+# Haru.Http
+
+Wrapper for WebSocketSharp.

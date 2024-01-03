@@ -1,0 +1,12 @@
+# nuget
+.nuget/
+
+# build
+obj/
+bin/
+
+# testing
+.coverage/
+
+# visual studio
+.vs/

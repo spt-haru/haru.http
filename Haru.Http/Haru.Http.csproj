@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>6.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>haru.http</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Merijn Hendriks</Authors>
+    <Company>Project Haru</Company>
+    <PackageDescription>Wrapper for WebSocketSharp.</PackageDescription>
+    <RepositoryUrl>https://github.com/spt-haru/haru.http</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Memory" Version="4.5.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Haru.Converters" HintPath="..\references\haru\Haru.Converters.dll" />
+    <Reference Include="Haru.Cryptography" HintPath="..\references\haru\Haru.Cryptography.dll" />
+    <Reference Include="Haru.Pools" HintPath="..\references\haru\Haru.Pools.dll" />
+    <Reference Include="WebSocketSharp" HintPath="..\references\haru\websocket-sharp.dll" />
+    <Reference Include="Zlib.Managed" HintPath="..\references\haru\zlib.managed.dll" />
+  </ItemGroup>
+
+</Project>
